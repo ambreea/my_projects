@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<HBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.InternetSalePackController">
+   <children>
+  <VBox alignment="CENTER_LEFT" spacing="15.0" fillWidth="true" >
+     <children>
+        <Label style="-fx-font: BOLD 20 Tahoma;" text="Insert data form"/>
+
+        <TextField fx:id="firstName" promptText="First name"/>
+        <TextField fx:id="lastName" promptText="Last name"/>
+        <TextField fx:id="address" promptText="Address"/>
+
+        <Label style="-fx-font: BOLD 12 Tahoma;" text="Speed (mb/s):"/>
+
+        <HBox spacing="5" fillHeight="true">
+           <children>
+              <ToggleButton fx:id="2" mnemonicParsing="false" text="2">
+                  <toggleGroup>
+                     <ToggleGroup fx:id="speed"/>
+                  </toggleGroup>
+              </ToggleButton>
+              <ToggleButton fx:id="5" mnemonicParsing="false" text="5" toggleGroup="$speed"/>
+              <ToggleButton fx:id="10" mnemonicParsing="false" text="10" toggleGroup="$speed"/>
+              <ToggleButton fx:id="20" mnemonicParsing="false" text="20" toggleGroup="$speed"/>
+              <ToggleButton fx:id="50" mnemonicParsing="false" text="50" toggleGroup="$speed"/>
+              <ToggleButton fx:id="100" mnemonicParsing="false" text="100" toggleGroup="$speed"/>
+           </children>
+        </HBox>
+
+        <Label style="-fx-font: BOLD 12 Tahoma;" text="Bandwidth:"/>
+
+        <HBox spacing="5" fillHeight="true">
+           <children>
+              <ToggleButton fx:id="unu" mnemonicParsing="false" text="1">
+                 <toggleGroup>
+                    <ToggleGroup fx:id="bandwidth"/>
+                 </toggleGroup>
+              </ToggleButton>
+              <ToggleButton fx:id="cinci" mnemonicParsing="false" text="5" toggleGroup="$bandwidth"/>
+              <ToggleButton fx:id="zece" mnemonicParsing="false" text="10" toggleGroup="$bandwidth"/>
+              <ToggleButton fx:id="suta" mnemonicParsing="false" text="100" toggleGroup="$bandwidth"/>
+              <ToggleButton fx:id="Flat" mnemonicParsing="false" text="Flat" toggleGroup="$bandwidth"/>
+           </children>
+        </HBox>
+
+        <Label style="-fx-font: BOLD 12 Tahoma;" text="Duration:"/>
+
+        <HBox spacing="5" fillHeight="true">
+           <children>
+              <ToggleButton fx:id="1year" mnemonicParsing="false" text="1 year">
+                 <toggleGroup>
+                    <ToggleGroup fx:id="duration"/>
+                 </toggleGroup>
+              </ToggleButton>
+              <ToggleButton fx:id="2years" mnemonicParsing="false" text="2 years" toggleGroup="$duration"/>
+           </children>
+        </HBox>
+        <HBox spacing="5" alignment="TOP_RIGHT">
+           <children>
+              <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#savePackage" text="Save Package"/>
+              <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clearPackage" text="Clear Form"/>
+              <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deletePackage" text="Delete Table Row"/>
+           </children>
+           <padding>
+              <Insets top="25.0" />
+           </padding>
+        </HBox>
+     </children>
+     <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+     </padding>
+  </VBox>
+   <GridPane alignment="CENTER" hgap="10.0" vgap="10.0">
+   <children>
+      <Label style="-fx-font: NORMAL 20 Tahoma;" text="Internet Sale Package Information" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+      <TableView fx:id="tableView" editable="true" GridPane.columnIndex="0" GridPane.rowIndex="1">
+         <columns>
+            <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="140">
+               <cellValueFactory>
+                  <PropertyValueFactory property="firstName"/>
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="lastNameColumn" text="Last Name" prefWidth="140">
+               <cellValueFactory>
+                  <PropertyValueFactory property="lastName"/>
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="addressColumn" text="Address" prefWidth="270">
+               <cellValueFactory>
+                  <PropertyValueFactory property="address"/>
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="speedColumn" text="Speed" prefWidth="60">
+               <cellValueFactory>
+                  <PropertyValueFactory property="speed"/>
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="bandwidthColumn" text="Bandwidth" prefWidth="70">
+            <cellValueFactory>
+               <PropertyValueFactory property="bandwidth"/>
+            </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="durationColumn" text="Duration" prefWidth="60">
+               <cellValueFactory>
+                  <PropertyValueFactory property="duration"/>
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+         <sortOrder>
+               <fx:reference source="lastNameColumn"/>
+         </sortOrder>
+
+      </TableView>
+   </children>
+   </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</HBox>
