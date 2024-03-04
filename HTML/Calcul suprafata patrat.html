@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcul suprafata patrat</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+
+
+		function ariaPatrat(latura, mesajUnu, mesajDoi){
+
+			if((latura<=0)||(latura==undefined)){
+				mesajUnu(latura);
+			}else if (isNaN(latura)==true){
+				mesajDoi(latura);
+			}else {document.write("Aria patratului este: " + latura*latura);}
+
+		}
+
+		ariaPatrat(prompt("Introduceti latura patratului:"),function(msgUnu){alert('Numarul introdus este mai mic sau egal cu zero sau nu ati completat valoarea laturii! Introduceti un numar pozitiv, diferit de zero pentru a calcula aria patratului!');}, function(msgDoi){alert('Ati introdus valori care nu sunt cifre! Introduceti un numar pentru a calcula aria patratului!');});
+	</script>
+
+</body>
+</html>

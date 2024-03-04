@@ -1,0 +1,45 @@
+		.art{			
+			margin:10px;
+			padding: 5px;
+			flex:0 0 80%;
+			border:1px solid #ccc;
+			background-color: black;
+			opacity: 0.85;
+			box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+		}
+		 .art img {
+		    max-width: 100%;
+		  }
+
+
+		 .art p, .art ul, .art a, .art figcaption{
+		    padding: 0 20px 20px;
+		    font-size: 100%;
+			font-family: Arial, sans-serif;			
+			color: #FFFFFF;
+			text-indent: 10%;
+			text-align: justify;
+		  }
+		
+		.art p:first-of-type:first-letter{
+			color:#1E6ACC;
+			font-size: 150%;
+			font-family:Times New Roman;
+			font-style:italic;
+			font-weight: bold;
+		}
+
+		.art h1{
+			text-indent: 10%;
+			text-align: justify;
+			color:#1E6ACC;
+			font-size: 120%;
+			font-family: Arial, sans-serif;	
+		}
+		.art h2{
+			text-indent: 10%;
+			text-align: justify;
+			color:#1E6ACC;
+			font-size: 110%;
+			font-family: Arial, sans-serif;	
+		}

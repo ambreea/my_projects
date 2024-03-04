@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suprafata cerc</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+			width: 50%;
+			height: 200%;
+			margin-bottom: 20px;
+			background-color: coral;
+			float: right;
+		}
+	</style>
+
+</head>
+<body onload="draw();">
+
+	<script type="text/javascript">
+
+		const PI = 3.141593;
+		var raza = prompt("Introduceti raza cercului:");
+		var suprafataCerc;
+
+
+		if ((raza <= 0)||(isNaN(raza)==true)||(raza==undefined)){
+			document.write("Valorile introduse nu sunt corecte. Nu se poate calcula suprafata cercului. Va rugam reintroduceti o valoare valida. Valoarea trebuie sa fie introdusa, sa fie mai mare ca 0, sa fie numar.");
+		}else{
+			suprafataCerc = PI * raza * raza;
+			document.write("Suprafata cercului este: " + suprafataCerc)
+		}
+
+	</script>
+
+	<div>
+
+		<canvas id="cerc" ></canvas>
+
+	</div>
+
+	<script type="text/javascript">
+
+		if (raza<70){
+
+			function draw(){
+				var canvas = document.getElementById('cerc');
+				if (canvas.getContext){
+					var cerc =canvas.getContext('2d');
+					cerc.beginPath();
+					cerc.arc(150,75,raza,0,2*PI);
+					cerc.lineWidth=3;
+					cerc.strokestyle='#FF0000';
+					cerc.stroke();
+				}
+			}
+		
+		} else if ((raza <= 0)||(isNaN(raza)==true)||(raza==undefined)){
+			document.write("");
+
+		}else{
+
+			alert("Raza introdusa este mai mare ca 70. Cercul nu se deseneaza! Pentru a desena cercul conform razei introduse, aceasta trebuie sa fie mai mica decat 70. Se va afisa doar suprafata cercului!");
+		}
+	</script>
+
+</body>
+</html>

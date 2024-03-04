@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manipularea structurii stilizarii si a datelor prin folosirea JS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form>
+		<label for="country"><b>Country selector</b></label>
+		<select name="country" id="country">
+			<option value="Romania">Romania</option>
+			<option value="Serbia">Serbia</option>
+			<option value="Ucraina">Ucraina</option>
+			<option value="Bulgaria">Bulgaria</option>
+			<option value="Ungaria">Ungaria</option>
+			<option value="Slovacia">Slovacia</option>
+			<option value="Austria">Austria</option>
+			<option value="Cehia">Cehia</option>
+			<option value="Polonia">Polonia</option>
+			<option value="Germania">Germania</option>
+			<option value="Italia">Italia</option>
+			<option value="Elvetia">Elvetia</option>
+			<option value="Franta">Franta</option>
+			<option value="Spania">Spania</option>
+			<option value="Grecia">Grecia</option>
+		</select>			
+	</form>
+
+	<div id="my-country"></div>
+
+	<script type="text/javascript">
+
+		var newDiv =document.getElementById("my-country");
+		var countrySelected = document.getElementById('country');
+		countrySelected.addEventListener('change',selected);
+
+		function selected (event){
+			
+			newDiv.innerHTML=event.target.value;
+	
+		}
+
+
+		// var newDiv =document.createElement("div");
+		// newDiv.setAttribute("id","my-country");		
+		// document.body.appendChild(newDiv);
+
+		// var newDivId =document.getElementById("my-country");
+		// var countrySelected = document.getElementById('country');
+		
+
+		// var createNode = countrySelected.addEventListener('change',selected);
+
+		// function selected (event){
+			
+		// 	newDivId.innerHTML=event.target.value;
+		// 	console.log(event.target.value);
+		// }
+
+		// var newContent=document.createTextNode(createNode);
+
+		// newDiv.appendChild(newContent);
+	</script>
+
+</body>
+</html>
