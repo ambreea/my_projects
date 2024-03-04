@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="main">
+    <class name="main.Department" table="department">
+        <meta attribute="class-description">
+            This class contains the department details
+        </meta>
+        <id name="departmentId" column="departmentId" type="int">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <set name="employeeSet" inverse="true" cascade="save-update" lazy="true">
+            <key column="departmentId" not-null="true"/>
+            <one-to-many class="main.Employee"/>
+        </set>
+    </class>
+</hibernate-mapping>
