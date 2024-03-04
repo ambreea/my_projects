@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dictionary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="src/main/xsd/dictionary.xsd">
+    <word>
+        <english>butterfly</english>
+        <romanian>fluture</romanian>
+        <update_date>2000-10-01</update_date>
+    </word>
+    <word>
+        <english>love</english>
+        <romanian>dragoste</romanian>
+        <update_date>2005-12-01</update_date>
+    </word>
+    <word>
+        <english>love</english>
+        <romanian>dragoste</romanian>
+        <update_date>2005-12-01</update_date>
+    </word>
+    <word>
+        <english>heart</english>
+        <romanian>inima</romanian>
+        <update_date>2008-05-12</update_date>
+    </word>
+    <word>
+        <english>make</english>
+        <romanian>a face</romanian>
+        <update_date>2005-04-21</update_date>
+    </word>
+    <word>
+        <english>disguise</english>
+        <romanian>a se deghiza</romanian>
+        <update_date>1999-07-23</update_date>
+    </word>
+    <word>
+        <english>cat</english>
+        <romanian>pisica</romanian>
+        <update_date>2002-03-26</update_date>
+    </word>
+    <word>
+        <english>dog</english>
+        <romanian>caine</romanian>
+        <update_date>2007-08-12</update_date>
+    </word>
+    <word>
+        <english>love</english>
+        <romanian>dragoste</romanian>
+        <update_date>2005-12-01</update_date>
+    </word>
+    <word>
+        <english>house</english>
+        <romanian>casa</romanian>
+        <update_date>1998-06-20</update_date>
+    </word>
+    <word>
+        <english>tree</english>
+        <romanian>pom</romanian>
+        <update_date>2004-11-19</update_date>
+    </word>
+    <word>
+        <english>climb</english>
+        <romanian>a urca</romanian>
+        <update_date>2005-03-15</update_date>
+    </word>
+    <word>
+        <english>bear</english>
+        <romanian>urs</romanian>
+        <update_date>2009-07-12</update_date>
+    </word>
+
+
+</dictionary>
+
+
+
